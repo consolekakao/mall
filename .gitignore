@@ -1,0 +1,7 @@
+./config.json
+/config.json
+../config.json
+config
+/node_modules
+/.pnp
+.pnp.js

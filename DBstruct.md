@@ -36,6 +36,8 @@
 > user_lastday time 최근접속일
 > 
 > user_ip varchar(20) 아이피
+> 
+> user_memo varchar(100) 관리자메모
 
 게시판테이블
 > board_idx int 인덱스
@@ -57,6 +59,8 @@
 > board_public bool 공개여부
 > 
 > board_password varchar(10) 게시글비밀번호
+> 
+> board_memo varchar(100) 관리자메모
 
 답글테이블
 > reply_idx int 인덱스
@@ -68,6 +72,8 @@
 > reply_writer 작성자ID
 > 
 > reply_name 작성자이름
+> 
+> reply_memo 관리자메모
 
 리뷰테이블
 > review_idx int 인덱스
@@ -78,9 +84,19 @@
 > 
 > review_contents varchar(300) 상품평
 > 
+> riview_img1 varchar(500) 리뷰이미지1
+> 
+> riview_img1 varchar(500) 리뷰이미지2
+> 
+> riview_img1 varchar(500) 리뷰이미지3
+> 
 > review_visible bool 리뷰숨기기 0:visible, 1:not visible
 > 
 > review_time datetime 리뷰작성시간
+> 
+> review_good int 리뷰추천수 
+> 
+> review_memo varchar(100) 관리자메모
 
 
 쿠폰테이블
@@ -104,7 +120,7 @@
 > 
 > cp_maxsale 최대할인금액
 > 
-> cp_memo varchar(30) 기타메모
+> cp_memo varchar(30) 관리자메모
 
 
 상품테이블
@@ -117,6 +133,8 @@
 > item_category_b varchar(15) 분류2
 > 
 > item_category_c varchar(15) 분류3
+>
+> item_upload_date time 상품업로드시간
 > 
 > item_name varchar(50) 상품명
 > 
@@ -147,14 +165,41 @@
 > item_orderinfo_3 (text) 상품 주문시 고지사항3
 > 
 > item_orderinfo_4 (text) 상품 주문시 고지사항4
+> 
+> item_memo varchar(100) 관리자메모
 
 주문내역
 > order_idx int 주문번호
+>
+> order_date datetime 주문일자
 > 
-> order_item_idx int 주문상품인덱스
+> order_item_idx int 주문상품그룹인덱스
 > 
 > order_item_price int 개당가격
 > 
 > order_item_count int 상품개수
-> 
+>
 > order_item_total_price int 상품 총가격
+> 
+> order_id varchar(30) 주문자 ID
+> 
+> order_name varchar(100) 주문자명
+> 
+> order_phone varchar(20) 주문자연락처
+> 
+> order_address varchar(200) 배송지
+> 
+> order_message varchar(200) 배송시요청사항
+> 
+> order_post varchar(10) 수령지우편번호
+> 
+> order_post_number varchar(30) 운송장번호
+> 
+> order_pay_ok varchar(10) 결제여부
+> 
+> order_payment varchar(10) 결제수단
+> 
+> order_memo varchar(100) 관리자메모
+
+
+
