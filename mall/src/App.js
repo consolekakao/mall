@@ -1,11 +1,10 @@
-import React from 'react';
-import {TwitterPicker} from 'react-color';
-import { render } from 'react-dom';
-import Register from "./register"
+import React, { useState } from 'react';
 function App() {
+ const [isLogin, setisLogin] = useState(null);
+
  return (
-    <>first init
-    <Register/>
+    <>
+    {isLogin}s
     </>
   );
 }
